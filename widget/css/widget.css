@@ -1,0 +1,65 @@
+.news {
+    position: relative;
+    width: 40%;
+    min-width: 280px;
+    max-width: 660px;
+    box-shadow: 1px 1px 4px grey;
+    padding-bottom: 1px;
+}
+
+.news__toggle {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    cursor: pointer;
+    display: inline-block;
+    height: 23px;
+    width: 24px;
+    background: url(./../img/message-box.png) no-repeat;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.news__title {
+    margin-left: 40px;
+}
+
+.news__toggle + .news__title::after {
+    color: #a8a8a8;
+    content: " (show)";
+}
+
+.news__toggle--open + .news__title::after {
+    content: " (hide)";
+}
+
+.news__body {
+    display: none;
+    margin: 0;
+}
+
+.news__toggle--open ~ .news__body {
+    display: block;
+}
+
+.news-line--not-read {
+    background-color: #eee;
+}
+
+.news-line__title {
+    margin: .2rem 0;
+}
+
+.news-line__info {
+    display: flex;
+    flex-wrap: wrap;
+    color: #a8a8a8;
+}
+
+.news-line__author::before {
+    content: 'Author: ';
+}
+
+.news-line__author {
+    margin-right: 30px;
+}
